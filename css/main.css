@@ -1,0 +1,463 @@
+@charset "urf-8";
+@import url(./reset.css);
+@import url(./font.css);
+@import url(./animation.css);
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    background: #15181B;
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* header영역 */
+header{
+    width: 80%;
+    height: 90px;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0 );
+    transform: translateX(-50%);
+    transition: all 1s;
+    z-index: 10;
+}
+
+header .inner{
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s;
+}
+
+header .inner .logo{
+    width: 70px;
+    height: 45px;
+    transition: all 1s;
+}
+
+header .inner .logo a{
+    display: block;
+    width: 70px;
+    height: 45px;
+    background: url(../images/logo_white.png) no-repeat;
+    background-size: 70px 45px;
+    text-indent: -99999px;
+    transition: all 1s;
+}
+
+header .inner .gnb{
+    display: flex;
+    gap: 60px;
+    margin-right: 0px;
+    transition: all 1s;
+}
+
+header .inner .gnb li{
+    width: 70px;
+    height: 24px;
+}
+
+header .inner .gnb li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px;
+    color: #dfdfdf;
+    position: relative;
+    transition: all 0.3s;
+}
+
+header .inner .gnb li a::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #dfdfdf;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+header .inner .gnb li:hover a{
+    color: #fff;
+}
+
+header .inner .gnb li:hover a::before{
+    transform: translate(-50%,10px);
+    opacity: 1;
+}
+
+header .inner .btn_menu{
+    width: 30px;
+    height: 27px;
+    position: relative;
+    cursor: pointer;
+}
+
+header .inner .btn_menu span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+header .inner .btn_menu .one{
+    top: 0%;
+}
+
+header .inner .btn_menu .two{
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+header .inner .btn_menu .three{
+    bottom: 0%;
+}
+
+/* header 끝 */
+
+/* home 영역 */
+section{
+    height: 100vh;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.home .scroll{
+    width: 40px;
+    height: 70px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home .scroll::after{
+    content: 'SCROLL';
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 50%;
+    bottom: 86px;
+    animation: scroll 1s infinite;
+    font-size: 14px;
+}
+
+.home .scroll::before{
+    content: '';
+    width: 4px;
+    height: 16px;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    animation: scroll 1s infinite;
+}
+
+@keyframes scroll{
+    0%{transform: translate(-50%,-8px);}
+    50%{transform: translate(-50%,2px);}
+    100%{transform: translate(-50%,-8px);}
+}
+
+.textcover{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.textcover .cover{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #15181B 0%, rgba(0,0,0,0) 50%, #15181B 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.textcover p{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    display: flex;
+}
+
+/* home 끝 */
+
+/* about 영역 */
+.about .inner{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.about .inner h1{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 40px;
+    opacity: 0.7;
+}
+
+.about .inner .bgbox1{
+    width: 500px;
+    height: 90%;
+    position: relative;
+}
+
+.about .inner .bgbox1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .inner .bgbox1 .txtbox1{
+    width: 800px;
+    position: absolute;
+    left: 300px;
+    top: 80px;
+}
+
+.about .inner .bgbox1 .txtbox1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+.about .inner .bgbox1 .txtbox1 h3{
+    font-size: 48px;
+}
+
+.about .inner .bgbox1 .txtbox1 h2{
+    font-size: 64px;
+    color: #8DAFCE;
+}
+
+.about .inner .txtbox2{
+    width: 472px;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.about .inner .txtbox2 p{
+    margin-bottom: 20px;
+    line-height: 26px;
+}
+
+
+.about .inner .txtbox2 span{
+    font-weight: 700;
+    color: #8DAFCE;
+    border-bottom: 2px solid #8DAFCE;
+}
+
+.about .inner .bgbox2{
+    width: 480px;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+}
+
+.about .inner .bgbox2 img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* about2 영역 */
+.about2 .inner{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.about2 .inner .card{
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.about2 .inner .card .profile{
+    width: 480px;
+    height: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.about2 .inner .card .profile img{
+    width: 100%;
+    height: 100%;
+    filter: blur(4px) brightness(50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.about2 .inner .card .profile:hover img{
+    filter: blur(0px) brightness(100%);
+}
+
+.about2 .inner .skills{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about2 .inner .skills li{
+    width: 10%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.0);
+    transition: all 0.3s ease-in-out;
+}
+
+.about2 .inner .skills li:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.about2 .inner .skills li img{
+    display: block;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.about2 .inner .skills li:hover img{
+    filter: grayscale(0%);
+}
+
+.about2 .inner .skills li .txtbox{
+    width: 400px;
+    padding: 4px 8px;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+    transform: translateX(-50%);
+    text-align: center;
+    visibility : hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.about2 .inner .skills li:first-child .txtbox{
+    left: 0;
+    transform: translateX(0);
+}
+
+.about2 .inner .skills li:last-child .txtbox{
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+.about2 .inner .skills li:hover .txtbox{
+    visibility: visible;
+    opacity: 1;
+}
+/* about 끝 */
+/* contact 영역 */
+.contact .inner{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact .inner h1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.contact .inner .info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact .inner .info li{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba(34, 34, 34, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 8px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
+}
+
+.contact .inner .info li .icon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+}
+
+.contact .inner .info li .text{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #fff;
+}
+
+.contact .inner .info li:nth-child(2) .icon::before{
+    content: 'TALK';
+    font-size: 16px;
+    color: #15181B;
+    font-weight: 800;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

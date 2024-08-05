@@ -1,0 +1,47 @@
+
+
+header.down{
+    width: 70%;
+    height: 60px;
+    top: 20px;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba(34, 34, 34, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 10;
+}
+
+header.down .inner{
+    height: 60px;
+    padding: 0 20px;
+}
+
+header.down .inner .logo{
+    width: 56px;
+    height: 36px;
+}
+
+header.down .inner .logo a{
+    display: block;
+    width: 49px;
+    height: 31.5px;
+    background: url(../images/logo_white.png) no-repeat;
+    background-size: 49px 31.5px;
+    text-indent: -99999px;
+}
+
+header .inner .btn_menu.on .one{
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+header .inner .btn_menu.on .two{
+    opacity: 0;
+}
+
+header .inner .btn_menu.on .three{
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
